@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MindApp 隐私政策 / Privacy Policy for MindApp</title>
+    <title>极简冥想 隐私政策 / Privacy Policy for 极简冥想 (MindApp)</title>
     <style>
         body { 
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'PingFang SC', 'Microsoft YaHei', sans-serif;
@@ -36,6 +36,19 @@
             border-radius: 4px;
             display: inline-block;
         }
+        .appinfo {
+            background: #eef4ff;
+            border: 1px solid #cfe0ff;
+            padding: 12px 16px;
+            border-radius: 6px;
+            margin: 16px 0;
+            font-size: 14px;
+        }
+        .appinfo code {
+            background: #dbe7ff;
+            padding: 1px 6px;
+            border-radius: 4px;
+        }
         ul {
             line-height: 1.8;
         }
@@ -62,14 +75,6 @@
             border-radius: 8px;
             color: #666;
         }
-        /* 敏感个人信息突出标示：加粗 + 下划线（合规要求） */
-        .sensitive {
-            font-weight: 700;
-            color: #d93025;
-            text-decoration: underline;
-            text-underline-offset: 2px;
-            text-decoration-thickness: 2px;
-        }
         .callout {
             background: #e8f5e9;
             border-left: 4px solid #43a047;
@@ -82,14 +87,23 @@
     </style>
 </head>
 <body>
-    <h1>MindApp 隐私政策</h1>
-    <p class="updated">最后更新：2026 年 9 月 7 日</p>
+    <h1>极简冥想 隐私政策</h1>
+    <p class="updated">最后更新：2026 年 9 月 20 日</p>
+
+    <div class="appinfo">
+        <strong>应用信息</strong><br>
+        应用名称：极简冥想（MindApp）<br>
+        版本：1.2.0<br>
+        Android 包名：<code>com.astramind.mindapp.app</code><br>
+        iOS Bundle ID：<code>com.astramind.mindapp</code><br>
+        运营者：北京尚灵科技有限公司（Beijing Shangling Technology Co., Ltd.）
+    </div>
 
     <h2>1. 引言</h2>
-    <p>MindApp（"本应用"、"我们"）是一款提供冥想、呼吸练习与助眠声音的本地工具类应用。我们高度重视您的隐私，本政策说明您在使用本应用时我们如何收集、使用和保护您的信息。本应用无需注册或登录即可使用。</p>
+    <p>极简冥想（"本应用"、"我们"）是一款提供冥想、呼吸练习与助眠声音的本地工具类应用。我们高度重视您的隐私，本政策说明您在使用本应用时我们如何收集、使用和保护您的信息。本应用无需注册或登录即可使用。</p>
 
     <div class="callout">
-        <strong>隐私承诺：</strong>MindApp 不收集任何<strong>个人身份信息</strong>（如姓名、手机号、账号密码等）。仅接入友盟统计 SDK（含 U-APM 崩溃监控）用于改进产品与服务质量（详见第 6 节）。您的冥想记录、设置等业务数据仅保存在您自己的设备上。
+        <strong>隐私承诺：</strong>极简冥想不收集任何<strong>个人身份信息</strong>（如姓名、手机号、账号密码等）。仅接入友盟统计 SDK（含 U-APM 崩溃监控）用于改进产品与服务质量（详见第 6 节）。您的冥想记录、设置等业务数据仅保存在您自己的设备上。
     </div>
 
     <h2>2. 我们收集的信息</h2>
@@ -101,7 +115,7 @@
         <li><strong>冥想记录</strong>：您的冥想时长、日期与统计信息，用于应用内查看历史记录与连续打卡。</li>
         <li><strong>声音与混音偏好</strong>：您选择的声音、混音音量组合。</li>
         <li><strong>提醒设置</strong>：您设置的每日提醒时间（当前版本提醒功能为本地配置）。</li>
-        <li><strong>订阅状态</strong>：本机的会员权益标记（本应用不接入任何支付渠道）。</li>
+        <li><strong>订阅状态</strong>：本机的会员权益标记。内购购买通过 Apple App Store / Google Play 平台完成，我们<strong>不在本机存储任何支付卡号、账单等支付信息</strong>（详见第 6 节）。</li>
     </ul>
 
     <h3>2.2 我们【不】收集的信息</h3>
@@ -128,9 +142,9 @@
 
     <h2>4. 数据存储与安全</h2>
     <ul>
-        <li><strong>本地存储</strong>：您的业务数据（冥想记录、设置等）仅存储在您设备的本地存储（SharedPreferences）中。</li>
+        <li><strong>本地存储</strong>：您的业务数据（冥想记录、设置等）仅存储在您设备的本地存储（SharedPreferences / 沙盒）中。</li>
         <li><strong>统计数据</strong>：友盟 SDK 按其隐私政策加密传输并存储统计数据；我们不通过友盟收集任何可识别您个人身份的信息。</li>
-        <li><strong>音频内容</strong>：本应用的全部音频均为随应用打包的本地资源，不进行任何在线下载或流媒体播放。</li>
+        <li><strong>音频内容</strong>：本应用的音频资源随应用打包提供，相关在线内容的访问（如适用）受对应平台与资源提供方条款约束。</li>
     </ul>
 
     <h2>5. 权限说明</h2>
@@ -153,8 +167,16 @@
                 <li>合规机制：仅在您首次启动同意本隐私政策后才会初始化该 SDK 并开始采集；不同意则不初始化、不采集</li>
             </ul>
         </li>
-        <li><strong>无广告、无推送、无支付 SDK</strong>：本应用不包含广告、推送或支付类第三方 SDK，不会与任何第三方共享您的个人信息。</li>
-        <li><strong>应用分发平台</strong>：您通过应用市场（如 vivo 应用商店等）下载本应用，相关下载与更新行为受对应平台隐私政策的约束。</li>
+        <li><strong>应用内购买（终身会员）</strong>：
+            <ul>
+                <li>提供方：Apple App Store / Google Play（平台方）</li>
+                <li>用途：终身会员（一次性买断）的购买与恢复</li>
+                <li>支付方式：由 Apple / Google 平台在应用内完成，我们<strong>不直接收集或存储您的支付卡号、账单地址等支付信息</strong></li>
+                <li>数据处理：相关支付与订阅数据受 Apple / Google 各自隐私政策约束；本应用仅在本地保存会员权益标记</li>
+            </ul>
+        </li>
+        <li><strong>无广告、无推送 SDK</strong>：本应用不包含广告类第三方 SDK，不会与广告类第三方共享您的个人信息。</li>
+        <li><strong>应用分发平台</strong>：您通过应用市场（如 App Store、Google Play、vivo 应用商店等）下载本应用，相关下载与更新行为受对应平台隐私政策的约束。</li>
     </ul>
 
     <h2>7. 您的权利</h2>
@@ -165,10 +187,10 @@
     </ul>
 
     <h2>8. 儿童隐私</h2>
-    <p>MindApp 不专门面向 14 岁以下儿童。我们不会故意收集儿童的个人信息。如您认为我们存在相关疑虑，请立即联系我们。</p>
+    <p>极简冥想不专门面向 14 岁以下儿童。我们不会故意收集儿童的个人信息。如您认为我们存在相关疑虑，请立即联系我们。</p>
 
     <h2>9. 数据共享</h2>
-    <p>我们<strong>不会出售、出租</strong>您的任何个人信息。除第 6 节所述的友盟统计 SDK（以匿名化、去标识化方式处理统计数据）外，我们不会向任何其他第三方共享、转让或公开披露您的个人信息。</p>
+    <p>我们<strong>不会出售、出租</strong>您的任何个人信息。除第 6 节所述的友盟统计 SDK（以匿名化、去标识化方式处理统计数据）及平台内购服务（由 Apple / Google 按其隐私政策处理支付数据）外，我们不会向任何其他第三方共享、转让或公开披露您的个人信息。</p>
 
     <h2>10. 数据泄露通知</h2>
     <p>我们尽力保障数据安全。如不幸发生个人数据泄露等安全事件，我们将及时更新本政策并依法履行通知义务。</p>
@@ -180,15 +202,15 @@
     <p>隐私相关事宜、数据请求或疑问，请联系：</p>
     <ul>
         <li><strong>隐私咨询</strong>：heyanghappy@gmail.com</li>
-        <li><strong>开发者</strong>：heyanghappy</li>
+        <li><strong>运营者</strong>：北京尚灵科技有限公司（Beijing Shangling Technology Co., Ltd.）</li>
     </ul>
     <p><em>数据相关请求的处理周期通常为 7–14 个工作日。</em></p>
 
     <hr>
 
     <div class="footer">
-        <p><strong>使用 MindApp 即表示您同意本隐私政策。</strong></p>
-        <p>MindApp —— 极简、平静的冥想与声音助手。您的隐私是我们的优先事项。</p>
+        <p><strong>使用极简冥想即表示您同意本隐私政策。</strong></p>
+        <p>极简冥想 —— 极简、平静的冥想与声音助手。您的隐私是我们的优先事项。</p>
     </div>
 </body>
 </html>
