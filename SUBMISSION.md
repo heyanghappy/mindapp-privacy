@@ -1,6 +1,6 @@
 # 极简冥想 · 上架提交信息归档
 
-> 最后更新：2026-09-20
+> 最后更新：2026-09-21
 > 运营主体：北京尚灵科技有限公司（Beijing Shangling Technology Co., Ltd.）
 
 ---
@@ -76,7 +76,8 @@
 仅用标准 HTTPS（ATS），无自有加密协议 → 选「否 / 适用豁免」。
 
 ### IDFA
-工程接 Umeng 统计，可能采集 IDFA。若隐私设置开启广告标识符，IDFA 问卷需如实声明（归因分析用途）。
+工程 Info.plist **未配置** `NSUserTrackingDescription`（无 ATT 弹窗）→ App Store Connect 中「使用广告标识符(IDFA)」一律选 **否**。
+> 注意：若后续接入 Umeng 等统计并真要采集 IDFA，必须加 `NSUserTrackingDescription` 弹窗并在 ASC 如实声明；当前无此配置，按“不使用”申报即可。
 
 ### 审核备注（App Review 信息）
 ```
@@ -89,9 +90,12 @@
 至少一套 6.5/6.7 英寸（1290×2796），建议 6 张：首页 / 冥想 / 呼吸 / 声音混音 / 计时 / 会员页。
 
 ### 内购（IAP，当前未建 → 真机购买失败根因）
-- 类型：非消耗型（终身会员）
-- 产品 ID：[待填，与工程 purchase_gateway.dart 中一致]
-- 需在 App Store Connect → 我的 App → 功能 → 内购项目 中创建并填价格，工程才能 queryProductDetails 成功。
+- 类型：**非消耗型（Non-Consumable）**
+- 产品 ID（必须与工程完全一致）：`com.astramind.mindapp.app.premium_lifetime`
+- 显示名称：极简冥想 · 终身会员
+- 价格档位：自选（参考 ¥68 / ¥98 / ¥128 终身买断）
+- 需在 App Store Connect → 我的 App → 功能 → 内购项目 中创建、填价格、上传**审核截图**，并随本版本一起提交审核。
+- 工程侧已就绪：`lib/features/subscription/infrastructure/iap_purchase_gateway.dart` 用 `buyNonConsumable` 购买，sku 即上面 ID。
 
 ---
 
@@ -107,7 +111,7 @@
 |---|---|---|
 | 华为应用市场 | 运动健康 | 运动健康 / 生活 |
 | 小米应用商店 | 健康 | 工具 |
-| vivo | 休闲娱乐（vivo 无「健康」类，勿选「医疗健康」需资质） | 便捷生活 |
+| vivo | 休闲娱乐（vivo 无「健康」类，勿选「医疗健康」需资质） | 娱乐（二级仅此合适，其余为头像表情/星座/游戏辅助/笑话段子） |
 | OPPO | 健康 / 运动 | 生活 |
 | 应用宝(腾讯) | 健康 | 生活工具 |
 | 百度手机助手 | 健康 | 生活 |
